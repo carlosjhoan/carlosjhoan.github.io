@@ -76,7 +76,13 @@
         }
 
 
+        #media a:active {
 
+            background-color: #272626;
+            box-shadow: 0 0 17px 1px #fecb5d;
+            transition: transform ease 0.5s, box-shadow ease 0.5s;
+
+        }
 
 
 
@@ -93,16 +99,17 @@
 
 
         #bar a {
+            font-family: 'Fira Mono', monospace;
             text-decoration: none;
             color: white;
             transition: transform ease 0.5s,text-shadow ease 0.5s;
-            font-weight: bold;
+            font-weight: 400;
 
         }
 
         #bar a:hover {
 
-            text-shadow: 0 0 5px rgba(255,255,255,0.5) , 0 0 20px rgba(255,255,255,0.5) , 0 0 30px rgba(255,255,255,0.5) , 0 0 40px #ffc433 , 0 0 70px #ffc433 , 0 0 80px #ffc433, 0 0 100px #ffc433 ;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5) , 0 0 20px rgba(255,255,255,0.5) , 0 0 30px rgba(255,255,255,0.5) , 0 0 40px #fcc027 , 0 0 70px #fcc027 , 0 0 80px #ffc027, 0 0 100px #ffc027 ;
             transition: transform ease 0.5s, text-shadow ease 0.5s;
             cursor: pointer;
             text-decoration: underline;
@@ -110,8 +117,7 @@
             
         }
 
-
-       
+     
 
         #cont-principal{
 
@@ -178,8 +184,22 @@
 
         }
 
-        #perfil {
-            font-size: 0.8rem;
+        
+
+        #perfil-lema {
+
+            font-family: 'Fira Mono';
+            color: white;
+            width: 50%;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+
+        }
+
+        #perfil-lema img {
+            width: 70%;
+            border-radius: 50%;
         }
 
         .centrado{
@@ -224,17 +244,17 @@
 
             40% {
                 
-                box-shadow: 10px 10px 300px  27px #fdcf6b;
+                box-shadow: 10px 10px 300px  25px #fdcf6b;
             }
 
             50% {
                 
-                box-shadow: 10px 10px 300px  40px #fdcf6b;
+                box-shadow: 10px 10px 300px  32px #fdcf6b;
             }
 
             60% {
                 
-                box-shadow: 10px 10px 300px  27px #fdcf6b;
+                box-shadow: 10px 10px 300px  25px #fdcf6b;
             }
 
             80% {
@@ -296,23 +316,13 @@
             
         }
 
-        
-
-
-
-
-        
-
-
-
-
     </style>
 </head>
 
 
 <body>
 
-   
+   <!--Nav Bar-->
 
     <div id = "nav" class = "d-flex justify-content-between p-3 sticky-top">
 
@@ -334,7 +344,7 @@
 
     </div>
 
-   
+   <!--Landing section d-flex flex-row mb-3 grid gap-3-->
 
     <div id = "cont-principal" class = "container py-2 column" >
 
@@ -343,16 +353,12 @@
             <p id = "root">carlosjhoan@Dev  <span>~</span></p>
             <p id = "perfil" ><span>$ cj</span> <em>Software Junior Developer</em></pid>
             <p id = "titular" class = "text-center">CARLOS JHOAN AGUILAR</p>
-
         </div>
+    </div>
 
-
-        <!--<div id = "perfil-lema " class = "container d-flex flex-row mb-3 grid gap-3 centrado">
-            <div id = "perfil">Foto de perfil</div>
-            <div id = "lema">Lema ...</div>
-        </div>-->
-        
-
+    <div id = "perfil-lema" class = "container d-flex flex-xl-nowrap flex-sm-wrap flex-md-nowrap  p-3 centrado ">
+        <img src="./statics/foto_perfil.png"  class = "" alt="">
+        <p class = " p-2"><span>"</span><em>Automatizar procesos priorizando la <span>lógica del negocio</span> es apostar por la <span>escalabilidad</span> responsable  y efectiva de una empresa</em>.<span>"</span></p>
     </div>
 
     <div id = "footer"></div>
