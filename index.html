@@ -110,17 +110,21 @@
 
         }
 
+        #desplegable {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
-
-
-        #media img{
-            
-            
         }
 
-        
-
-
+        #bar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #101010;
+            border-radius: 20px;
+        }
+    
 
         #bar a {
             font-family: 'Fira Mono', monospace;
@@ -128,6 +132,7 @@
             color: white;
             transition: transform ease 0.5s,text-shadow ease 0.5s;
             font-weight: 400;
+            font-size: 1.0rem;
 
         }
 
@@ -139,6 +144,10 @@
             text-decoration: underline;
             text-decoration-color: #FFB533;
             
+        }
+
+        #menu:active {
+            border: 2px #FFB533;
         }
 
      
@@ -410,7 +419,7 @@
 </head>
 
 
-<body>
+<div>
 
     <!--Barra de progreso-->
 
@@ -418,25 +427,42 @@
 
    <!--Nav Bar-->
 
-    <div id = "nav" class = "d-flex justify-content-between p-3 sticky-top">
+   
 
-        <div id = "media" class = " col-sm-12 col-md-4 col-xl-3 d-flex justify-content-start hstack gap-1">
-            
-            <a href="" class = "neon-media"><img  class= "ins" src="./statics/instagram.png" alt=""  ></a>
-            <a href="" class = "neon-media"><img class = "gith" src="./statics/github.png" alt="" ></a>
-            <a href="" class = "neon-media"><img class = "lin" src="./statics/linkedin.png" alt="" ></a>
+
+    <div id = "nav" class = "d-flex justify-content-end p-3 sticky-top">
+
+        <div id = "desplegable">
+
+            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+                <div id = "bar"class = "text-end lh-lg">
+                    <a  class = "" href="">Sobre mí</a>
+                    <a class = "" href="">Proyectos</a>
+                    <a class = "" href="">Skills</a>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark col-sm-12 col-md-4 col-xl-3 ">
+                <div class="container-fluid d-flex justify-content-end">
+                  <button id = "menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+            </nav>
         </div>
 
-        <div class = "col-sm-12 col-md-4 col-xl-6"></div>
-
-        <div id = "bar"class = "d-flex flex-row mb-3 grid gap-3 col-sm-12 col-md-4 col-xl-3 justify-content-end">
-            <a href="">Acerca de mí</a>
-            <a href="">Proyectos</a>
-            <a href="">Skills</a>
-            
-        </div>
+        
+        
 
     </div>
+
+    <div id = "media" class = " col-sm-12 col-md-4 col-xl-3 d-flex justify-content-start hstack gap-1 p-2">
+            
+        <a href="" class = "neon-media"><img  class= "ins" src="./statics/instagram.png" alt=""  ></a>
+        <a href="" class = "neon-media"><img class = "gith" src="./statics/github.png" alt="" ></a>
+        <a href="" class = "neon-media"><img class = "lin" src="./statics/linkedin.png" alt="" ></a>
+    </div>
+    
+    
 
    <!--Landing section d-flex flex-row mb-3 grid gap-3-->
 
