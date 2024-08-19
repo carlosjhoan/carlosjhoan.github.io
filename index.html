@@ -311,6 +311,9 @@
             width: 40%;
             box-shadow: 0px 0px 17px -4px #feb524;
             border-radius: 20px;
+            animation: auto desaparecer linear both;
+            animation-timeline: view();
+            animation-range: exit -50% exit 50%;
         }
 
         #sobre_mi {
@@ -323,7 +326,20 @@
         #parrafo{
             width: 70%;
             font-size: 0.9rem;
-        }        
+        }  
+        
+        /* .titular {
+            color: white;
+            overflow: hidden;
+            border-right: .15em solid #FFB533;
+            font-size: 0.9rem;
+            width: 0;
+            white-space: nowrap;
+            font-weight:500;
+            animation: 
+                        typing 2s steps(20, end) forwards, 
+                        blink .8s infinite;
+        } */
 
         footer {
             color: white;
@@ -486,8 +502,8 @@
         <div id = "desplegable">
 
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                <div id = "bar"class = "text-end lh-lg p-2">
-                    <a  class = "" href="">Sobre mí</a>
+                <div id = "bar"class = "navbar text-end lh-lg p-2">
+                    <a  class = " " href="#sobre_mi">Sobre mí</a>
                     <a class = "" href="">Proyectos</a>
                     <a class = "" href="">Skills</a>
                 </div>
@@ -530,7 +546,7 @@
 
     <!--Descargar mi CV-->
     <div id = "descarga_cv">
-        <a  id = "mi_cv" class="centrado p-3 container" href="./Archivos/CV_Carlos_Aguilar_Galvis.pdf" download ><img id = "flecha" src="./statics/download.png" alt="">Mi CV<img id = "hoja-vida"  src="./statics/hoka_vida.PNG" alt=""></a>
+        <a  id = "mi_cv" class=" p-3 container" href="./Archivos/CV_Carlos_Aguilar_Galvis.pdf" download ><img id = "flecha" src="./statics/download.png" alt="">Mi CV<img id = "hoja-vida"  src="./statics/hoka_vida.PNG" alt=""></a>
     </div>
     
     <!--Sobre mí-->
@@ -539,7 +555,7 @@
         <div id ="titulo-sobre-mi" class = "seccion-titulo container p-3">
             <p id = "root">carlosjhoan@Dev  <span>~/sobre-mi</span></p>
             <p class = "perfil" ><span>$ ls</span> <em></em></p>
-            <p id = "titular" class = "text-center">SOBRE MÍ</p>
+            <p  class = "titular text-center">SOBRE MÍ</p>
         </div>
 
         <p id ="parrafo" class="text-center container"><span>"</span>No concibo existencia que no sea guiada a través de mis 4 pilares: <span><em>Bienestar personal</em></span>, <span><em>Respeto</em></span>, <span><em>Empatía</em></span> y <span><em>Servicio</em></span>.<br><br> Como desarrollador de software, he sido un apasionado por la <span><em>automatización de procesos</em></span> priorizando la <span><em>lógica del negocio</em></span>. Actualmente me esfuerzo en desarrollar sistemas con <span><em>cero deuda técnica</em></span>, por lo cual me declaro como un <span><em>clean coder</em></span> y <span><em>clean architect</em></span>.<span>"</span></p>
