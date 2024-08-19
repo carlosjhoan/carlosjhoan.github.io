@@ -146,10 +146,20 @@
             
         }
 
-        #menu:active {
-            border: 2px #FFB533;
+
+      
+
+
+        #menu:hover {
+            outline: none;
+            box-shadow: 0 0 17px 1px #fecb5d;
+            transition: transform ease 0.5s, box-shadow ease 0.5s, background-color ease 0.5s;
         }
 
+        #menu span {
+            background-image: url("statics/hamburguesa_menu.png");
+            background-size: 30px;
+        }
      
 
         #cont-principal{
@@ -298,6 +308,12 @@
             display: flex;
             justify-content: center;
             vertical-align: middle;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #logo img {
+                width: 30%;
+            }
         }
 
         @keyframes typing {
@@ -453,7 +469,7 @@
             </div>
             <nav class="navbar navbar-dark col-sm-12 col-md-4 col-xl-3 ">
                 <div class="container-fluid d-flex justify-content-end">
-                  <button id = "menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <button id = "menu" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                 </div>
