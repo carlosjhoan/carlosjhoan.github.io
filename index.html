@@ -52,13 +52,10 @@
 
         
 
-        @keyframes reveal {
-            from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
-            to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
-        }
+        
 
         img {
-            animation: auto reveal linear both;
+            animation: auto revelar linear both;
             animation-timeline: view();
             animation-range: entry 25% entry 100%;
         }
@@ -89,6 +86,9 @@
             padding: 10px;
             border-radius: 50%;
             transition: transform ease 0.5s, box-shadow ease 0.5s, background-color ease 0.5s;
+            animation: auto desaparecer linear both;
+            animation-timeline: view();
+            animation-range: exit -200% exit -100%;
             
             
             
@@ -413,6 +413,16 @@
             to { transform: scaleX(1); }
         }
 
+        @keyframes revelar{
+            from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
+            to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+        }
+
+        @keyframes desaparecer {
+            from { opacity: 1;}
+            to { opacity: 0;}
+        }
+
        
 
     </style>
@@ -435,7 +445,7 @@
         <div id = "desplegable">
 
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                <div id = "bar"class = "text-end lh-lg">
+                <div id = "bar"class = "text-end lh-lg p-2">
                     <a  class = "" href="">Sobre mí</a>
                     <a class = "" href="">Proyectos</a>
                     <a class = "" href="">Skills</a>
@@ -457,9 +467,9 @@
 
     <div id = "media" class = " col-sm-12 col-md-4 col-xl-3 d-flex justify-content-start hstack gap-1 p-2">
             
-        <a href="" class = "neon-media"><img  class= "ins" src="./statics/instagram.png" alt=""  ></a>
-        <a href="" class = "neon-media"><img class = "gith" src="./statics/github.png" alt="" ></a>
-        <a href="" class = "neon-media"><img class = "lin" src="./statics/linkedin.png" alt="" ></a>
+        <a href="https://www.instagram.com/carlos.aguilar0512/" target="_blank" class = "neon-media"><img  class= "ins" src="./statics/instagram.png" alt=""  ></a>
+        <a href="https://github.com/carlosjhoan" target="_blank" class = "neon-media"><img class = "gith" src="./statics/github.png" alt="" ></a>
+        <a href="https://www.linkedin.com/in/carlos-jhoan-aguilar-0292b3157/" target="_blank" class = "neon-media"><img class = "lin" src="./statics/linkedin.png" alt="" ></a>
     </div>
     
     
@@ -495,9 +505,9 @@
         </div>
     
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex p-2">
-          <li class="ms-3"><a class="text-body-secondary" href="#"><img  class = "ins" src="./statics/instagram.png" alt=""  ></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="#"><img class = "gith" src="./statics/github.png" alt="" ></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="#"><img class = "lin" src="./statics/linkedin.png" alt="" ></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/carlos.aguilar0512/" target="_blank"><img  class = "ins" src="./statics/instagram.png" alt=""  ></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/carlosjhoan" target="_blank"><img class = "gith" src="./statics/github.png" alt="" ></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/carlos-jhoan-aguilar-0292b3157/" target="_blank"><img class = "lin" src="./statics/linkedin.png" alt="" ></a></li>
         </ul>
      </footer>
 
