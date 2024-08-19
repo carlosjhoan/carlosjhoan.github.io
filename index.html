@@ -188,14 +188,19 @@
 
         }
 
-        
+        .terminal {
+            font-family: 'Fira Mono';
+            color: white;
+        }
+
+        .perfil {
+            font-size: 0.8rem;
+        }
 
         #nombre {
 
             background-color: #101010;
             border-radius: 20px;
-            color: white;
-            font-family: 'Fira Mono';
             box-shadow: 3px 2px 17px -4px #feb524;
             width: 70%;
             animation: electric 1.0s infinite;
@@ -237,12 +242,17 @@
             font-size: 0.95rem;
             display: flex;
             align-items: center;
+            animation: auto desaparecer linear both;
+            animation-timeline: view();
+            animation-range: exit -50% exit 50%;
 
         }
 
         #perfil-lema img {
             width: 50%;
             border-radius: 50%;
+            
+            
         }
 
         #descarga_cv {
@@ -296,6 +306,24 @@
             transition: width 0.5s
             
         }
+
+        .seccion-titulo {
+            width: 40%;
+            box-shadow: 0px 0px 17px -4px #feb524;
+            border-radius: 20px;
+        }
+
+        #sobre_mi {
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #parrafo{
+            width: 70%;
+            font-size: 0.9rem;
+        }        
 
         footer {
             color: white;
@@ -453,9 +481,6 @@
 
    <!--Nav Bar-->
 
-   
-
-
     <div id = "nav" class = "d-flex justify-content-end p-3 sticky-top">
 
         <div id = "desplegable">
@@ -486,29 +511,42 @@
     </div>
     
     
-
    <!--Landing section d-flex flex-row mb-3 grid gap-3-->
 
     <div id = "cont-principal" class = "container py-2 column" >
 
         <div id = "logo" class=" centrado  container col-sm-12"><img src="./statics/logo.png"  alt="" class="img-fluid"></div>
-        <div id = "nombre" class = " container  p-3 ">
+        <div id = "nombre" class = "terminal container  p-3 ">
             <p id = "root">carlosjhoan@Dev  <span>~</span></p>
-            <p id = "perfil" ><span>$ cj</span> <em>Software Junior Developer</em></pid>
+            <p id = "perfil" class = "perfil" ><span>$ cj</span> <em>Software Junior Developer</em></p>
             <p id = "titular" class = "text-center">CARLOS JHOAN AGUILAR</p>
         </div>
     </div>
 
     <div id = "perfil-lema" class = "container d-flex flex-wrap flex-xl-nowrap flex-sm-wrap flex-md-nowrap  p-3 centrado ">
         <img src="./statics/foto_perfil.png"  class = "" alt="">
-        <p class = "text-center p-2"><span>"</span><em>Automatizar procesos priorizando la <span>lógica del negocio</span> es apostar por la <span>escalabilidad</span> responsable  y efectiva de una empresa</em>.<span>"</span></p>
+        <p class = "text-center p-2 container"><span>"</span><em>Automatizar procesos priorizando la <span>lógica del negocio</span> es apostar por la <span>escalabilidad</span> responsable  y efectiva de una empresa</em>.<span>"</span></p>
     </div>
 
     <!--Descargar mi CV-->
     <div id = "descarga_cv">
-        <a  id = "mi_cv" class="centrado p-3 container mx-auto" href="./Archivos/CV_Carlos_Aguilar_Galvis.pdf" download=""><img id = "flecha" src="./statics/download.png" alt="">Mi CV<img id = "hoja-vida"  src="./statics/hoka_vida.PNG" alt=""></a>
+        <a  id = "mi_cv" class="centrado p-3 container" href="./Archivos/CV_Carlos_Aguilar_Galvis.pdf" download ><img id = "flecha" src="./statics/download.png" alt="">Mi CV<img id = "hoja-vida"  src="./statics/hoka_vida.PNG" alt=""></a>
     </div>
     
+    <!--Sobre mí-->
+
+    <div id="sobre_mi" class = " terminal container" >
+        <div id ="titulo-sobre-mi" class = "seccion-titulo container p-3">
+            <p id = "root">carlosjhoan@Dev  <span>~/sobre-mi</span></p>
+            <p class = "perfil" ><span>$ ls</span> <em></em></p>
+            <p id = "titular" class = "text-center">SOBRE MÍ</p>
+        </div>
+
+        <p id ="parrafo" class="text-center container"><span>"</span>No concibo existencia que no sea guiada a través de mis 4 pilares: <span><em>Bienestar personal</em></span>, <span><em>Respeto</em></span>, <span><em>Empatía</em></span> y <span><em>Servicio</em></span>.<br><br> Como desarrollador de software, he sido un apasionado por la <span><em>automatización de procesos</em></span> priorizando la <span><em>lógica del negocio</em></span>. Actualmente me esfuerzo en desarrollar sistemas con <span><em>cero deuda técnica</em></span>, por lo cual me declaro como un <span><em>clean coder</em></span> y <span><em>clean architect</em></span>.<span>"</span></p>
+
+    </div>
+
+
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
           <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
