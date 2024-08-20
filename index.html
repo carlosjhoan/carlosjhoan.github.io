@@ -317,7 +317,7 @@
         }
 
         #sobre_mi {
-            height: 120vh;
+            
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -328,7 +328,7 @@
             font-size: 0.9rem;
         }  
         
-        /* .titular {
+        .titular {
             color: white;
             overflow: hidden;
             border-right: .15em solid #FFB533;
@@ -339,7 +339,31 @@
             animation: 
                         typing 2s steps(20, end) forwards, 
                         blink .8s infinite;
-        } */
+        }
+
+        .accordion {
+            
+            --bs-accordion-active-bg: #ffac1e;
+            --bs-accordion-active-color: black;
+            width: 70%;
+            
+        }
+
+        .contenido-acordion {
+            background-color: black;
+            color: white;
+            font-family: 'Fira Mono';
+            font-size: 0.8rem;
+        }
+
+        .titular-acordion {
+            background-color: #FFB533;
+            font-family: 'Fira Mono';
+            font-weight: bold;
+            
+        }
+
+        
 
         footer {
             color: white;
@@ -551,15 +575,43 @@
     
     <!--Sobre mí-->
 
-    <div id="sobre_mi" class = " terminal container" >
+    <div id="sobre_mi" class = "terminal container py-5" >
         <div id ="titulo-sobre-mi" class = "seccion-titulo container p-3">
             <p id = "root">carlosjhoan@Dev  <span>~/sobre-mi</span></p>
             <p class = "perfil" ><span>$ ls</span> <em></em></p>
             <p  class = "titular text-center">SOBRE MÍ</p>
         </div>
 
-        <p id ="parrafo" class="text-center container"><span>"</span>No concibo existencia que no sea guiada a través de mis 4 pilares: <span><em>Bienestar personal</em></span>, <span><em>Respeto</em></span>, <span><em>Empatía</em></span> y <span><em>Servicio</em></span>.<br><br> Como desarrollador de software, he sido un apasionado por la <span><em>automatización de procesos</em></span> priorizando la <span><em>lógica del negocio</em></span>. Actualmente me esfuerzo en desarrollar sistemas con <span><em>cero deuda técnica</em></span>, por lo cual me declaro como un <span><em>clean coder</em></span> y <span><em>clean architect</em></span>.<span>"</span></p>
+        <!--Parrafo sobre mí-->
+        <p id ="parrafo" class="text-center container p-5"><span>"</span>No concibo existencia que no sea guiada a través de mis 4 pilares: <span><em>Bienestar personal</em></span>, <span><em>Respeto</em></span>, <span><em>Empatía</em></span> y <span><em>Servicio</em></span>.<br><br> Como desarrollador de software, he sido un apasionado por la <span><em>automatización de procesos</em></span> priorizando la <span><em>lógica del negocio</em></span>. Actualmente me esfuerzo en desarrollar sistemas con <span><em>cero deuda técnica</em></span>, por lo cual me declaro como un <span><em>clean coder</em></span> y <span><em>clean architect</em></span>.<span>"</span></p>
 
+        <!--Misión y visión-->
+        <div class="accordion  container" id="accordionExample">
+            <div class=" accordion-item">
+              <p class=" accordion-header">
+                <button class="titular-acordion accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  MISIÓN
+                </button>
+              </p>
+              <div id="collapseOne" class="contenido-acordion accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p><span>$</span> <span><em>Resolver problemáticas</em></span> de generación de valor agregado o de óptima gestión de operaciones para  <span><em>empresas</em></span> dedicadas a tener un <span><em>positivo impacto social</em></span> a través del <span><em>desarrollo de software</em></span>: robusto, seguro, mantenible y escalable enfocado en la automatización de procesos, priorizando la <span><em>lógica del negocio</em></span>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <p class="accordion-header">
+                <button class="titular-acordion accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  VISIÓN
+                </button>
+              </p>
+              <div id="collapseTwo" class="contenido-acordion accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Resolver problemáticas de generación de valor agregado o de óptima gestión de operaciones para empresas dedicadas a tener un positivo impacto social a través del desarrollo de software: robusto, seguro, mantenible y escalable enfocado en la automatización de procesos, priorizando la lógica del negocio.</p>
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
 
 
@@ -581,7 +633,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
-
+        
     </script>
 </body>
 </html>
