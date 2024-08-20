@@ -422,7 +422,10 @@
             align-items: center;
             height: 500px;
             width: 300px;
-            transition: transform ease 0.5s, box-shadow ease 0.5s,
+            transition: transform ease 0.5s, box-shadow ease 0.5s;
+            animation: auto desaparecer linear both;
+            animation-timeline: view();
+            animation-range: exit 0% exit 60%;
        }
 
        .tarjeta img {
@@ -456,6 +459,13 @@
        .enlace-github {
             filter: invert(1);
        }
+
+       .descripcion-proyecto {
+        width: 90%;
+        text-align: justify;
+       }
+
+       
        
         
 
@@ -739,7 +749,7 @@
             <div class = "tarjeta  p-2 ">
                 <p>TIC TAC TOE</p>
                 <img src="./statics/tic-tac-toe.png" alt="">
-                <p>description</p>
+                <p class = "descripcion-proyecto"><span>$</span> El juego de toda la vida, esta vez programado en <span><em>Python</em></span> con persistencia de datos en <span><em>json</em></span> y visualizado desde la <span><em>Terminal</em></span>.</p>
                 <div class = "tablero-iconos p-2">
                     <img src="./statics/python.png" alt="">
                     <img src="./statics/json-file.png" alt="">
@@ -750,7 +760,8 @@
             <div class = "tarjeta p-2">
                 <p>SABOR CASERO</p>
                 <img src="./statics/logo_tranparent.png" alt="">
-                <p>description</p>
+                <p class = "descripcion-proyecto"><span>$</span> Página web creada para un <span><em>restaurante casero</em></span> en la cual los <span><em>clientes</em></span> pueden pedir sus
+                <span><em>almuerzos</em></span> bien sea por <span><em>delivery</em></span> o <span><em>pasar a recoger</em></span>.</p>
                 <div class = "tablero-iconos p-2">
                     <img src="./statics/html.png" alt="">
                     <img src="./statics/css-3.png" alt="">
@@ -763,12 +774,12 @@
             <div class = "tarjeta p-2">
                 <p>FERRE ACME</p>
                 <img src="./statics/ferre_logo.jpg" alt="">
-                <p>description</p>
+                <p class = "descripcion-proyecto"><span>$</span> Creación de un <span><em>E-Commerce</em></span> para una <span><em>ferretería local</em></span>. Allí los clientes pueden realizar compra de materiales.</p>
                 <div class = "tablero-iconos p-2">
                     <img src="./statics/html.png" alt="">
                     <img src="./statics/css-3.png" alt="">
                     <img src="./statics/java-script.png" alt="">
-                    <img src="./statics/json-file.png" alt="">
+                    <img src="./statics/database-cloud.png" alt="">
                     <img src="./statics/git.png" alt="">
                     <img src="./statics/bootstrap.png" alt="">
                 </div>
@@ -777,7 +788,7 @@
             <div class = "tarjeta p-2">
                 <p>TRAVEL AGENCY</p>
                 <img src="./statics/travel_agency.jpg" alt="">
-                <p>description</p>
+                <p class = "descripcion-proyecto"><span>$</span> Desarrollo de un sistema para una <span><em>agencia de viajes</em></span> donde según el <span><em>rol del usuario</em></span>, se habilitan ciertas funciones. La <span><em>persistencia de información</em></span> se realizó utilizando <span><em>MySQL</em></span></p>
                 <div class = "tablero-iconos p-2">
                     <img src="./statics/java.png" alt="">
                     <img src="./statics/mysql.png" alt="">
