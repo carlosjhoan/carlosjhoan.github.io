@@ -321,6 +321,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            align-items: center;
 
         }
 
@@ -381,108 +382,80 @@
         #mis_proyectos {
             
             
-            height: 120vh;
-        }
-
-        .slider {
-            width: 70%;
-            height: 60%;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            height: 90%;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
             
-            
-            
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            
-            
-        }
-        .slides::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-        .slides::-webkit-scrollbar-thumb {
-            background: black;
-            border-radius: 10px;
-        }
-        .slides::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .slides > div {
-            scroll-snap-align: start;
-            flex-shrink: 0;
-            width: 100%;
-            height: 90%;
-            margin-right: 30px;
-            border-radius: 10px;
-            background: #eee;
-            transform-origin: center center;
-            transform: scale(1);
-            transition: transform 0.5s;
-            position: relative;
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 100px;
         }
 
         
 
-        .author-info {
-            background: rgba(0, 0, 0, 0.75);
-            color: white;
-            padding: 0.75rem;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            margin: 0;
-        }
+       video {
+        width: 80%;
+        height: auto;
+       }
 
-        .author-info a {
-            color: white;
-        }
+       #proyectos {
+        
+            width: 70%;
+       }
 
-        .slider img {
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-        }
-
-        .slider > a {
-            display: inline-flex;
-            width: 1.5rem;
-            height: 1.5rem;
-            background: white;
-            text-decoration: none;
+       .tablero-iconos {
+            background-color: #FFB533;
+            height: 40px;
+            width: auto;
+            display: flex;
+            justify-content:center;
             align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 0 0.5rem 0;
-            position: relative;
-        }
+            border-radius: 20px;
+       }
 
-        .slider > a:active {
-            top: 1px;
-        }
+       .tablero-iconos img {
+            width: 30px;
+            height: 30px;
+       }
+       
 
-        .slider > a:focus {
-            background: #000;
-        }
+       .tarjeta {
+            outline: 1px solid white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 500px;
+            width: 300px;
+            transition: transform ease 0.5s, box-shadow ease 0.5s,
+       }
 
-        /* Don't need button navigation */
+       .tarjeta img {
+        width: 65%;
+       }
+
+       .tarjeta:hover  {
+            outline: none;
+            box-shadow: 0 0 17px 1px #fecb5d;
+            transition: transform ease 0.5s, box-shadow ease 0.5s,
+       }
+
+       .tarjeta a {
+        padding: 5px;
+        width: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        transition: transform ease 0.5s, box-shadow ease 0.5s,
+       }
+
+       .tarjeta a:hover {
+        box-shadow: 0 0 17px 1px #fecb5d;
+        transition: transform ease 0.5s, box-shadow ease 0.5s,
+       }
+
+       .tarjeta a:active {
+        background-color: #2a2a2a;
+       }
+
+       .enlace-github {
+            filter: invert(1);
+       }
        
         
 
@@ -514,7 +487,14 @@
                 width: 80%;
             }
 
+            .tarjeta {
+                outline: none;
+                box-shadow: 0 0 17px 1px #fecb5d;
+                transition: transform ease 0.5s, box-shadow ease 0.5s,
+            }
+
         }
+
 
         @keyframes typing {
             from { width: 0 }
@@ -754,30 +734,60 @@
             <p  class = "titular text-center">MIS PROYECTOS</p>
         </div>
 
-        <div class="slider container ">
+        <div id = "proyectos" class="container d-flex flex-wrap flex-xl-wrap flex-sm-wrap flex-md-wrap gap-4 py-5 centrado">
   
-          
-            <div class="slides">
-              <div id="slide-1">
-                1
-              </div>
-              <div id="slide-2">
-                2
-              </div>
-              <div id="slide-3">
-                3
-              </div>
-              <div id="slide-4">
-                4
-              </div>
+            <div class = "tarjeta  p-2 ">
+                <p>TIC TAC TOE</p>
+                <img src="./statics/tic-tac-toe.png" alt="">
+                <p>description</p>
+                <div class = "tablero-iconos p-2">
+                    <img src="./statics/python.png" alt="">
+                    <img src="./statics/json-file.png" alt="">
+                    <img src="./statics/git.png" alt="">
+                </div>
+                <a href="" ><img src="./statics/github.png" alt="" class = "enlace-github"></a>
             </div>
+            <div class = "tarjeta p-2">
+                <p>SABOR CASERO</p>
+                <img src="./statics/logo_tranparent.png" alt="">
+                <p>description</p>
+                <div class = "tablero-iconos p-2">
+                    <img src="./statics/html.png" alt="">
+                    <img src="./statics/css-3.png" alt="">
+                    <img src="./statics/java-script.png" alt="">
+                    <img src="./statics/json-file.png" alt="">
+                    <img src="./statics/git.png" alt="">
+                </div>
+                <a href=""><img src="./statics/github.png" alt="" class = "enlace-github"></a>
+            </div>
+            <div class = "tarjeta p-2">
+                <p>FERRE ACME</p>
+                <img src="./statics/ferre_logo.jpg" alt="">
+                <p>description</p>
+                <div class = "tablero-iconos p-2">
+                    <img src="./statics/html.png" alt="">
+                    <img src="./statics/css-3.png" alt="">
+                    <img src="./statics/java-script.png" alt="">
+                    <img src="./statics/json-file.png" alt="">
+                    <img src="./statics/git.png" alt="">
+                    <img src="./statics/bootstrap.png" alt="">
+                </div>
+                <a href=""><img src="./statics/github.png" alt="" class = "enlace-github"></a>
+            </div>
+            <div class = "tarjeta p-2">
+                <p>TRAVEL AGENCY</p>
+                <img src="./statics/travel_agency.jpg" alt="">
+                <p>description</p>
+                <div class = "tablero-iconos p-2">
+                    <img src="./statics/java.png" alt="">
+                    <img src="./statics/mysql.png" alt="">
+                    <img src="./statics/git.png" alt="">
+                </div>
+                <a href=""><img src="./statics/github.png" alt="" class = "enlace-github"></a>
+            </div>
+            
 
-            <a href="#slide-1">1</a>
-            <a href="#slide-2">2</a>
-            <a href="#slide-3">3</a>
-            <a href="#slide-4">4</a>
-
-          </div>
+        </div>
 
     </div>
 
