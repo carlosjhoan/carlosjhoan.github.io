@@ -316,12 +316,15 @@
             animation-range: exit -50% exit 50%;
         }
 
-        #sobre_mi {
-            
+        .seccion {
+
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+
         }
+
+
 
         #parrafo{
             width: 70%;
@@ -375,6 +378,112 @@
             
         }
 
+        #mis_proyectos {
+            
+            
+            height: 120vh;
+        }
+
+        .slider {
+            width: 70%;
+            height: 60%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            height: 90%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            
+            
+            
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            
+            
+        }
+        .slides::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        .slides::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 10px;
+        }
+        .slides::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .slides > div {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 100%;
+            height: 90%;
+            margin-right: 30px;
+            border-radius: 10px;
+            background: #eee;
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+
+        
+
+        .author-info {
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 0.75rem;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+        }
+
+        .author-info a {
+            color: white;
+        }
+
+        .slider img {
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+        }
+
+        .slider > a {
+            display: inline-flex;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: white;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 0 0.5rem 0;
+            position: relative;
+        }
+
+        .slider > a:active {
+            top: 1px;
+        }
+
+        .slider > a:focus {
+            background: #000;
+        }
+
+        /* Don't need button navigation */
+       
         
 
         footer {
@@ -390,7 +499,9 @@
             vertical-align: middle;
         }
 
+
         @media only screen and (max-width: 800px) {
+
             #logo img {
                 width: 30%;
             }
@@ -596,7 +707,7 @@
     
     <!--Sobre mí-->
 
-    <div id="sobre_mi" class = "terminal container py-5" >
+    <div id="sobre_mi" class = "seccion terminal container py-5" >
         <div id ="titulo-sobre-mi" class = "seccion-titulo container p-3">
             <p id = "root">carlosjhoan@Dev  <span>~/sobre-mi</span></p>
             <p class = "perfil" ><span>$ ls</span> <em></em></p>
@@ -628,11 +739,46 @@
               </p>
               <div id="collapseTwo" class="contenido-acordion accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <p>$ <span><em>Ser un referente</em></span> dentro del mercado Tech reconocido por mi <span><em>confiabilidad</em></span> en la escalabilidad de modelos de negocio a través del <span><em>liderazgo</em></span> de equipos de trabajo eficientes y talentosos, capaces de desarrollar soluciones basadas en software involucrando la <span><em>integración de nuevas tecnologías</em></span>.</p>
+                    <p><span>$</span> <span><em>Ser un referente</em></span> dentro del mercado Tech reconocido por mi <span><em>confiabilidad</em></span> en la escalabilidad de modelos de negocio a través del <span><em>liderazgo</em></span> de equipos de trabajo eficientes y talentosos, capaces de desarrollar soluciones basadas en software involucrando la <span><em>integración de nuevas tecnologías</em></span>.</p>
                 </div>
               </div>
             </div>
         </div>
+    </div>
+
+    <!--Mis Proyectos-->
+    <div id = "mis_proyectos" class = "seccion terminal container py-5">
+        <div id ="titulo-sobre-mi" class = "seccion-titulo container p-3">
+            <p id = "root">carlosjhoan@Dev  <span>~/mis-proyectos</span></p>
+            <p class = "perfil" ><span>$ start</span><em></em> mis-proyectos.exe</p>
+            <p  class = "titular text-center">MIS PROYECTOS</p>
+        </div>
+
+        <div class="slider container ">
+  
+          
+            <div class="slides">
+              <div id="slide-1">
+                1
+              </div>
+              <div id="slide-2">
+                2
+              </div>
+              <div id="slide-3">
+                3
+              </div>
+              <div id="slide-4">
+                4
+              </div>
+            </div>
+
+            <a href="#slide-1">1</a>
+            <a href="#slide-2">2</a>
+            <a href="#slide-3">3</a>
+            <a href="#slide-4">4</a>
+
+          </div>
+
     </div>
 
 
